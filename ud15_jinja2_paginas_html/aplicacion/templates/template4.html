@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enlaces</title>
+</head>
+<body>
+    <h2>Enlaces</h2>
+    {% if links %}
+    <ul>
+        {% for link in links -%}
+        <li><a href="{{ link.url }}">{{ link.nombre }}</a></li>
+        {% endfor -%}
+    </ul>
+    {% else %}
+    <p>No hay enlaces disponibles</p>
+    {% endif %}
+</body>
+</html>

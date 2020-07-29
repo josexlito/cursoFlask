@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block title %} Hola que tal {% endblock %}
+{% block content %}
+    <h1>Saludo</h1>
+    <p>
+    Hola{% if nombre %}
+    {{', '+nombre|title }}
+    {% endif %}
+    </p>
+{% endblock %}
